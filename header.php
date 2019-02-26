@@ -8,10 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/sleek.ui.js"></script>
-	<script type="text/javascript" src="js/slick.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body <?php body_class(); ?>>

@@ -18,6 +18,9 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/sleek.ui.js"></script>
+<script type="text/javascript" src="js/slick.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
