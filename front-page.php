@@ -45,10 +45,9 @@
                     <ul>
                     <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
                         <?php setup_postdata($post); ?>
-                        <?php echo $post; ?>
                         <div class="grid-4">
                             <div class="image-thumbnail">
-                                <a class="image-holder" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo get_the_post_thumbnail_url('full') ?>);"></a>
+                                <a class="image-holder" href="<?php the_permalink(); ?>" style="background-image:url(<?php echo get_the_post_thumbnail_url( $post ,'full') ?>);"></a>
                                 <a class="chrd-name bold text-uppercase text-center" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                             </div>
                         </div>
