@@ -5,27 +5,27 @@
         	<div class="content-row">
             	<div class="grid-12">
                 	<div class="slider-wrapper">
-                    	<div class="slide">
-                        	<img src="image/homepage-slider/3.jpg">
-                        </div>
-                        <div class="slide">
-                        	<img src="image/homepage-slider/4.jpg">
-                        </div>
-                        <div class="slide">
-                        	<img src="image/homepage-slider/5.jpg">
-                        </div>
-                    	<div class="slide">
-                        	<img src="image/homepage-slider/1.jpg">
-                        </div>
-                        <div class="slide">
-                        	<img src="image/homepage-slider/2.jpg">
-                        </div>
+                        <?php 
+                        if( have_rows('slider') ): 
+                            // loop through the rows of data
+                            while ( have_rows('slider') ) : the_row();
+                            // display a sub field value
+                        ?>
+
+                            <div class="slide">
+                                <img src="<?php get_sub_field('image'); ?>">
+                            </div>
+
+                        <?php
+                            endwhile;
+                        endif;
+                    ?>
                     </div>
                     <div class="banner-content">
-                    	<h1 class="bold">welcome to gazipur chrd</h1>
+                    	<h1 class="bold"><?php the_field('slider_title'); ?></h1>
                         <br clear="all">
-                    	<a href="" class="button-large button-white semibold">book now</a>
-                        <p>Experience the uncommon element</p>
+                    	<a href="<?php the_field('slider_button_link'); ?>" class="button-large button-white semibold">book now</a>
+                        <p><?php the_field('slider_subtitle'); ?></p>
                     </div>
                 </div>
             </div>
