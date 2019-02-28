@@ -37,13 +37,29 @@
                     <p class="times-new-roman text-big text-italic"><?php the_field('description'); ?></p>
                 </div>
             </div>
-            <?php
-                echo '<pre>';
-                print_r( get_field('chrds')  );
-                echo '</pre>';
-                die;
-            ?>
         	<div class="content-row">
+                <?php 
+                $posts = get_field('relationship_field_name');
+
+                if( $posts ): ?>
+                    <ul>
+                    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                        <?php setup_postdata($post); ?>
+                        <div class="grid-4">
+                            <div class="image-thumbnail">
+                                <a class="image-holder" href="" style="background-image:url(<?php get_the_post_thumbnail_url(get_the_ID(),'full') ?>);"></a>
+                                <a class="chrd-name bold text-uppercase text-center" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            </div>
+                        </div>
+                        <li>
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                            <span>Custom field from $post: <?php the_field('author'); ?></span>
+                        </li>
+                    <?php endforeach; ?>
+                    </ul>
+                    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                <?php endif; ?>
+
             	<div class="grid-4">
                 	<div class="image-thumbnail">
                     	<a class="image-holder" href="" style="background-image:url(<?php bloginfo('stylesheet_directory'); ?>/image/image-gallery/Madhobpur/img1.png);"></a>
