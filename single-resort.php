@@ -78,9 +78,9 @@
             </div>
         	<div class="content-row margin-top-50">
                 <?php
-                if( have_rows('gallery') ): 
+                if( have_rows('rooms') ): 
                     // loop through the rows of data
-                    while ( have_rows('gallery') ) : the_row();
+                    while ( have_rows('rooms') ) : the_row();
                     // display a sub field value
                 ?>
                     <div class="grid-4">
