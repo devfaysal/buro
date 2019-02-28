@@ -13,13 +13,13 @@
                         ?>
 
                             <div class="slide">
-                                <img src="<?php get_sub_field('image'); ?>">
+                                <img src="<?php the_sub_field('image'); ?>">
                             </div>
 
                         <?php
                             endwhile;
                         endif;
-                    ?>
+                        ?>
                     </div>
                     <div class="banner-content">
                     	<h1 class="bold"><?php the_field('slider_title'); ?></h1>
@@ -35,95 +35,35 @@
     	<div class="fluid-container">
         	<div class="content-row">
             	<div class="grid-12 text-center">
-                	<h2 class="section-title text-uppercase">gazipur chrd views</h2>
-                    <p class="times-new-roman text-big text-italic">Stylish accommodation option at CHRD Resort & Spa incorporates 6 different locations across the country with a choice of 16 Deluxe Suites, 2 Deluxe Family Suite and 2 Pool Villas to anticipate all of your holiday needs. All categories are the epitome of Bangladeshi luxury with customized interiors and essential home comforts. </p>
+                	<h2 class="section-title text-uppercase"><?php the_field('heading'); ?></h2>
+                    <p class="times-new-roman text-big text-italic"><?php the_field('description'); ?></p>
                 </div>
             </div>
         	<div class="content-row">
-            	<div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="javascript:void(0)" style="background-image:url(image/image-gallery/Madhobpur/inner-img1.jpg);">
-                        	<span class="enlarge-view">
-                            	<span class="enlarge-content">
-                                	<i class='el el-plus'></i>
-                                    <br clear="all">
-                                    <span class="inline times-new-roman white text-italic">Enlarge View</span>
+                <?php
+                if( have_rows('gallery') ): 
+                    // loop through the rows of data
+                    while ( have_rows('gallery') ) : the_row();
+                    // display a sub field value
+                ?>
+                    <div class="grid-4">
+                        <div class="image-thumbnail">
+                            <a class="image-holder" href="javascript:void(0)" style="background-image:url(<?php the_sub_field('image'); ?>);">
+                                <span class="enlarge-view">
+                                    <span class="enlarge-content">
+                                        <i class='el el-plus'></i>
+                                        <br clear="all">
+                                        <span class="inline times-new-roman white text-italic">Enlarge View</span>
+                                    </span>
                                 </span>
-                            </span>
-                        </a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Backside swimmingpool</a>
+                            </a>
+                            <a class="chrd-name bold text-uppercase text-center" href=""><?php the_sub_field('title'); ?></a>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="javascript:void(0)" style="background-image:url(image/image-gallery/Madhobpur/inner-img2.jpg);">
-                        	<span class="enlarge-view">
-                            	<span class="enlarge-content">
-                                	<i class='el el-plus'></i>
-                                    <br clear="all">
-                                    <span class="inline times-new-roman white text-italic">Enlarge View</span>
-                                </span>
-                            </span>
-                        </a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">frontside entrance</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="javascript:void(0)" style="background-image:url(image/image-gallery/Madhobpur/inner-img3.jpg);">
-                        	<span class="enlarge-view">
-                            	<span class="enlarge-content">
-                                	<i class='el el-plus'></i>
-                                    <br clear="all">
-                                    <span class="inline times-new-roman white text-italic">Enlarge View</span>
-                                </span>
-                            </span>
-                        </a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Restaurant view</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="javascript:void(0)" style="background-image:url(image/image-gallery/Madhobpur/inner-img4.jpg);">
-                        	<span class="enlarge-view">
-                            	<span class="enlarge-content">
-                                	<i class='el el-plus'></i>
-                                    <br clear="all">
-                                    <span class="inline times-new-roman white text-italic">Enlarge View</span>
-                                </span>
-                            </span>
-                        </a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">living room view</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="javascript:void(0)" style="background-image:url(image/image-gallery/Madhobpur/inner-img5.jpg);">
-                        	<span class="enlarge-view">
-                            	<span class="enlarge-content">
-                                	<i class='el el-plus'></i>
-                                    <br clear="all">
-                                    <span class="inline times-new-roman white text-italic">Enlarge View</span>
-                                </span>
-                            </span>
-                        </a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">bedroom view</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="javascript:void(0)" style="background-image:url(image/image-gallery/Madhobpur/inner-img6.jpg);">
-                        	<span class="enlarge-view">
-                            	<span class="enlarge-content">
-                                	<i class='el el-plus'></i>
-                                    <br clear="all">
-                                    <span class="inline times-new-roman white text-italic">Enlarge View</span>
-                                </span>
-                            </span>
-                        </a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">varandah view</a>
-                    </div>
-                </div>
+                <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
         </div>
     </section>
@@ -137,24 +77,22 @@
                 </div>
             </div>
         	<div class="content-row margin-top-50">
-            	<div class="grid-4">
-                	<div class="thumbnail">
-                        <img src="image/image-gallery/room1.jpg">
-                        <div class="thumb-label"><span class="inline text-uppercase padding-top-10">family suite</span> <a class="inline float-right button-small button-whiteborder times-new-roman text-italic" href="">View Details</a></div>
+                <?php
+                if( have_rows('gallery') ): 
+                    // loop through the rows of data
+                    while ( have_rows('gallery') ) : the_row();
+                    // display a sub field value
+                ?>
+                    <div class="grid-4">
+                        <div class="thumbnail">
+                            <img src="<?php the_sub_field('image'); ?>">
+                            <div class="thumb-label"><span class="inline text-uppercase padding-top-10"><?php the_sub_field('title'); ?></span> <a class="inline float-right button-small button-whiteborder times-new-roman text-italic" href="<?php the_sub_field('link'); ?>">View Details</a></div>
+                        </div>
                     </div>
-                </div>
-                <div class="grid-4">
-                	<div class="thumbnail">
-                        <img src="image/image-gallery/room2.jpg">
-                        <div class="thumb-label"><span class="inline text-uppercase padding-top-10">Couple regular</span> <a class="inline float-right button-small button-whiteborder times-new-roman text-italic" href="">View Details</a></div>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="thumbnail">
-                        <img src="image/image-gallery/room3.jpg">
-                        <div class="thumb-label"><span class="inline text-uppercase padding-top-10">Premium suite</span> <a class="inline float-right button-small button-whiteborder times-new-roman text-italic" href="">View Details</a></div>
-                    </div>
-                </div>
+                <?php
+                    endwhile;
+                endif;
+                ?>
             </div>
         </div>
     </section>
