@@ -39,7 +39,7 @@
             </div>
         	<div class="content-row">
                 <?php 
-                $posts = get_field('relationship_field_name');
+                $posts = get_field('chrds');
 
                 if( $posts ): ?>
                     <ul>
@@ -59,43 +59,6 @@
                     </ul>
                     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
                 <?php endif; ?>
-
-            	<div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="" style="background-image:url(<?php bloginfo('stylesheet_directory'); ?>/image/image-gallery/Madhobpur/img1.png);"></a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Madhupur chrd</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="" style="background-image:url(<?php bloginfo('stylesheet_directory'); ?>/image/image-gallery/Madhobpur/img2.jpg);"></a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Gazipur chrd</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="" style="background-image:url(<?php bloginfo('stylesheet_directory'); ?>/image/image-gallery/Madhobpur/img3.jpg);"></a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Chittagong chrd</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="" style="background-image:url(<?php bloginfo('stylesheet_directory'); ?>/image/image-gallery/Madhobpur/img4.jpg);"></a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Khulna chrd</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="" style="background-image:url(<?php bloginfo('stylesheet_directory'); ?>/image/image-gallery/Madhobpur/img5.jpg);"></a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Comilla chrd</a>
-                    </div>
-                </div>
-                <div class="grid-4">
-                	<div class="image-thumbnail">
-                    	<a class="image-holder" href="" style="background-image:url(<?php bloginfo('stylesheet_directory'); ?>/image/image-gallery/Madhobpur/img6.jpg);"></a>
-                        <a class="chrd-name bold text-uppercase text-center" href="">Sylhet chrd</a>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
