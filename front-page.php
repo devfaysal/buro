@@ -42,7 +42,6 @@
                 $posts = get_field('chrds');
 
                 if( $posts ): ?>
-                    <ul>
                     <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
                         <?php setup_postdata($post); ?>
                         <div class="grid-4">
@@ -52,7 +51,6 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-                    </ul>
                     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
                 <?php endif; ?>
             </div>
