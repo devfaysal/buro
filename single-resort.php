@@ -77,22 +77,24 @@
                 </div>
             </div>
         	<div class="content-row margin-top-50">
-                <?php
-                if( have_rows('rooms') ): 
-                    // loop through the rows of data
-                    while ( have_rows('rooms') ) : the_row();
-                    // display a sub field value
-                ?>
-                    <div class="grid-4">
-                        <div class="thumbnail">
-                            <img src="<?php the_sub_field('image'); ?>">
-                            <div class="thumb-label"><span class="inline text-uppercase padding-top-10"><?php the_sub_field('title'); ?></span> <a class="inline float-right button-small button-whiteborder times-new-roman text-italic" href="<?php the_sub_field('link'); ?>">View Details</a></div>
+
+                <?php 
+                $posts = get_field('rooms');
+
+                if( $posts ): ?>
+                    <ul>
+                    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+                        <?php setup_postdata($post); ?>
+
+                        <div class="grid-4">
+                            <div class="thumbnail">
+                                <img src="<?php echo get_the_post_thumbnail_url( $post ,'full') ?>">
+                                <div class="thumb-label"><span class="inline text-uppercase padding-top-10"><?php the_title(); ?></span> <a class="inline float-right button-small button-whiteborder times-new-roman text-italic" href="<?php the_permalink(); ?>">View Details</a></div>
+                            </div>
                         </div>
-                    </div>
-                <?php
-                    endwhile;
-                endif;
-                ?>
+                    <?php endforeach; ?>
+                    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                <?php endif; ?>
             </div>
         </div>
     </section>
