@@ -31,7 +31,7 @@
                 <li><a href=""><span>Sylhet CHRD</span></a></li>
             </ul>
             
-            <img src="image/menu-img.jpg">
+            <img src="https://wp.faysal.me/buro/wp-content/uploads/2019/03/menu-img.jpg">
         </div>
     </div>
 	<div id="content" class="site-content">
