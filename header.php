@@ -12,7 +12,7 @@
     	<div class="fluid-container">
         	<div class="content-row">
             	<div class="grid-12 text-center">
-                	<a class="branding" href="<?php echo get_site_url(); ?>"><img class="transition" src="https://wp.faysal.me/buro/wp-content/uploads/2019/02/chrd.jpg" alt="BURO CHRD"></a>
+                	<a class="branding" href="<?php echo get_site_url(); ?>"><img class="transition" src="<?php get_template_directory_uri() ?> '/image/chrd.jpg'" alt="BURO CHRD"></a>
                     <a class="menu transition" href="javascript:void(0)"><span class="hamburger-menu"></span> menu</a>
                 </div>
             </div>
