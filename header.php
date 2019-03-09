@@ -31,7 +31,7 @@
                 <li><a href=""><span>Sylhet CHRD</span></a></li>
             </ul>
             
-            <img src="./image/menu-img.jpg">
+            <img src="<?php get_template_directory_uri() ?>/image/menu-img.jpg">
         </div>
     </div>
 	<div id="content" class="site-content">
