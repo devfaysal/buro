@@ -15,5 +15,13 @@ $(document).ready(function(){
   	  slidesToScroll: 1
 	});
 	
+	$(window).scroll(function(){
+		var scrollval = $(window).scrollTop();
+		if(scrollval > 0){
+			$("header").addClass("slim-header");
+		}else{
+			$("header").removeClass("slim-header");
+		}
+	})
 
 })

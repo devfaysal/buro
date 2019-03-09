@@ -50,13 +50,17 @@ header{
 	padding:0;
 	position:fixed;
 	top:0;
-	z-index:150;
+	z-index:1000;
 	left:0;
 	width:100%;
 	height:300px;
 	background-image:url(../image/header-gradient.png);
 	background-position:bottom left;
 	background-repeat:repeat-x;
+}
+
+.transition{
+	transition:all 0.5s ease;
 }
 .branding{
 	display:inline-block;
@@ -112,12 +116,29 @@ header{
 	left:0;
 }
 
+.slim-header{
+	background-image: none;
+	background-color: #000;
+	height: auto;
+	padding: 5px 0px;
+	font-size: 0;
+}
+
+.slim-header .branding img {
+    width: 90px;
+	border:1px solid rgba(255,255,255,0.2);
+}
+
+.slim-header .menu {
+    top: 23px;
+    right: 0px;
+}
+
 /*banner styles*/
 
 .banner{
 	position:relative;
-	height:100vh;
-	overflow:hidden;
+
 }
 .banner .fluid-container, .banner .content-row, .banner .grid-12{
 	padding:0px;
@@ -135,7 +156,7 @@ header{
     border: none;
     width: 50px;
     height: 50px;
-    z-index: 50;
+    z-index: 200;
     text-indent: -9999px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -246,7 +267,7 @@ header{
 	background-color:rgba(0,0,0,0.5);
 	width:100%;
 	display:inline-block;
-	height:300px;
+	height:100%;
 	position:absolute;
 	top:0;
 	left:0;
@@ -401,3 +422,196 @@ footer{
 .room-features li{
 	margin-bottom:10px;
 }
+
+@media (min-width: 0px) and (max-width: 1500px) {
+	.banner-content{
+		height:360px;
+	}
+	.why-choose-chrd {
+		height: 700px;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 1300px) {
+	.banner-content{
+		height:260px;
+	}
+	.why-choose-chrd {
+		height: 600px;
+	}
+	.innerpageBanner .banner-content h1 {
+		font-size:20px;
+		letter-spacing: 20px;
+		margin-bottom: 10px;
+		margin-top: 0px;
+	}
+	
+	.image-thumbnail .chrd-name{
+		font-size:14px;
+	}
+	.thumb-label {
+		font-size: 12px;
+	}
+	
+	
+}
+
+@media (min-width: 0px) and (max-width: 1200px) {
+	.thumb-label a.button-small{
+		font-size: 11px;
+		padding: 5px 10px;
+	}
+	
+	.thumb-label .padding-top-10{
+		padding-top:5px;
+	}
+	.fluid-container {
+		padding: 0px 30px;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 992px) {
+	.thumb-label{
+		text-align:center;
+	}
+	.thumb-label a.button-small{
+		float:none;
+	}
+	
+	.thumb-label span, .thumb-label a{
+		display:block;
+		margin:5px 0px;
+	}
+	.branding img {
+		width: 150px;
+	}
+	.menu {
+		top: 50px;
+		right: 0px;
+	}
+	
+	.image-holder{
+		height:200px;
+	}
+	
+	.image-holder::before{
+		height: 156px;
+	}
+	.image-thumbnail .chrd-name {
+		font-size: 12px;
+	}
+	.section-title {
+		font-size: 30px;
+	}
+	.why-choose-chrd {
+		height: 450px;
+	}
+	.feedback-slides h4 {
+		font-size: 25px;
+	}
+	.text-big {
+		font-size: 16px;
+	}
+
+	.quote {
+		font-size: 20px;
+		padding: 0px 60px;
+		color: #9a9a99;
+		line-height: 27px;
+	}
+}
+
+@media (min-width: 0px) and (max-width: 720px) {
+	header{
+		background-image:none;
+	}
+	.banner-content{
+		height:160px;
+		padding-top:0px;
+	}
+	
+	.branding img {
+		width: 100px;
+	}
+	.menu {
+		top: 30px;
+		right: 20px;
+		font-size: 12px;
+	}
+	
+	.hamburger-menu {
+		top: 7px;
+		left: 0;
+	}
+	.hamburger-menu::before {
+		top: -4px;
+		left: 0;
+	}
+	.hamburger-menu::after {
+		bottom: -4px;
+		left: 0;
+	}
+	
+	.banner-content p{
+		font-size: 10px;
+		margin-top:10px;
+	}
+	
+	.banner-content .button-large{
+		margin-top: 67px;
+		font-size: 12px;
+		padding: 10px 15px;
+	}
+	.fluid-container {
+		padding: 0px 20px;
+	}
+	.why-chrd-content {
+		padding: 30px;
+		width: 100%;
+		background-color: rgba(0,0,0,0.7);
+		position: static;
+		height:auto;
+	}
+	
+	.why-chrd-content p.dark-gray{
+		color:#fff;
+	}
+	.why-choose-chrd {
+		height: auto;
+	}
+	.section-title {
+		font-size: 25px;
+	}
+	
+	footer p.text-medium{
+		font-size:12px;
+		text-align:center;
+	}
+	
+	.social-icons{
+		display:block;
+		text-align:center;
+	}
+	
+	 .innerpageBanner .banner-content h1 {
+		font-size: 14px;
+		letter-spacing: 5px;
+	}
+	
+	.innerpageBanner .button-large {
+		margin-top: 0px;
+	}
+	
+	.thumbnail-listing .thumbnail{
+		margin-bottom:30px;
+	}
+	
+	.contactus-bg .grid-6.border-right{
+		border:none;
+	}
+	
+	.contactus-bg .grid-6 .text-right, .contactus-bg .grid-6{
+		text-align:center;
+	}
+}
+
