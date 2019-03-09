@@ -21,15 +21,13 @@
 	<div class="fullpage-nav">
     	<div class="nav-border">
         	<a href="javascript:void(0)" class="menu-close"></a>
-            <ul>
-                <li><a href=""><span>Home</span></a></li>
-                <li><a href=""><span>Madhupur CHRD</span></a></li>
-                <li><a href=""><span>Gazipur CHRD</span></a></li>
-                <li><a href=""><span>Chittagong CHRD</span></a></li>
-                <li><a href=""><span>Khulna CHRD</span></a></li>
-                <li><a href=""><span>Comilla CHRD</span></a></li>
-                <li><a href=""><span>Sylhet CHRD</span></a></li>
-            </ul>
+            
+            <?php
+                wp_nav_menu( array( 
+                    'theme_location' => 'menu-1',
+                    'container' => '',
+                ) ); 
+            ?>
             
             <img src="<?php echo get_template_directory_uri(); ?>/image/menu-img.jpg">
         </div>
